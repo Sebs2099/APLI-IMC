@@ -1,25 +1,30 @@
-function calcularIMC () {
-    const peso = parseFloat(document.getElementById("peso").value)
-    const altura = parseFloat(document.getElementById("altura").value);
-    
-    if (isNaN(peso) || isNaN(altura) || altura <= 0) {
-        document.getElementById("resultado").textContent = "ingrese números válidos en peso y altura";
+document.addEventListener('DOMContentLoaded', () => {
+    const boton = document.getElementById('enviarBtn');
+    const seccionFormulario = document.getElementById('formulario');
+
+    boton.addEventListener('click', () => {
+    const nombre = document.getElementById('nombre').value.trim();
+    const edad = parseInt(document.getElementById('edad').value.trim());
+
+    if (nombre === '' || isNaN(edad)) {
+        seccionFormulario.innerHTML = '<p style="color: red;">Por favor, completa todos los campos correctamente.</p>';
         return;
     }
 
-    const imc = peso / (altura * altura);
-    let estado;
-    if (imc < 18.5) {
-        estado = "Bajo peso";
-    } else if (imc < 24.9) {
-        estado = "Peso normal";
-    } else if (imc < 29.9) {
-        estado = "Sobrepeso";
-    } else {
-        estado = "Obesidad";
+    if (edad <= 0) {
+        seccionFormulario.innerHTML = '<p style="color: orange;">La edad debe ser mayor a 0.</p>';
+        return;
     }
 
-    document.getElementById("resultado").textContent = `Tu IMC es ${imc.toFixed(2)} y tu estado es: ${estado}`;
-}
+    let mensaje = `Hola <strong>${nombre}</strong>, tienes <strong>${edad}</strong> años.`;
+    let color = edad >= 18 ? 'green' : 'blue';
 
+    if (edad >= 18) {
+        mensaje += ' ¡Ya eres mayor de edad!';
+    } else {
+        mensaje += ' Aún eres menor de edad.';
+    }
 
+    seccionFormulario.innerHTML = `<p style="color: ${color};">${mensaje}</p>`;
+    });
+});

@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="aca pones una descripcion del sitio">
-    <meta name="keywords" content="aca pones palabras claves separadas por coma">
+    <meta name="description" content="this is a page when you can validate your age and name">
+    <meta name="keywords" content="age, name, validation, form, javascript, html, css">
     <meta name="sitedomain" content="https://github.com/Sebs2099/APLI-IMC.git">
     <meta name="organization" content="Sebs2099">
     <meta name="author" content="Sebastian Cabarcas">
@@ -14,26 +14,43 @@
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="15days">
     <meta name="theme-color" content="#ffffff">
-    <link rel="stylesheet" href="./src/css/styles.css">
-    <title>Document</title>
+
+    <link rel="stylesheet" href="src/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>Validación de Edad</title>
 </head>
+
 <body>
-    <header>
-        <h1>Calculadora de IMC</h1>
+    
+    <div id="particles-js"></div>
+    <div class="card">
+    <h2>Validación de Edad</h2>
+    
+    <div class="input-group">
+        <i class="fa-solid fa-user"></i>
+        <input type="text" id="nombre" placeholder="Escribe tu nombre">
+    </div>
 
-        <label for = "peso">Peso (kg):</label>
-        <input type="number" id="peso"><br><br>
+    <div class="input-group">
+        <i class="fa-solid fa-calendar"></i>
+        <input type="number" id="edad" placeholder="Escribe tu edad">
+    </div>
+   
+    <button id="enviarBtn" class="btn">Enviar</button>
 
-        <label for="altura">Altura (m):</label>
-        <input type="number" id="altura"><br><br>
+    <section id="formulario"></section>
+    </div>
 
-        <button onclick="calcularIMC()">Calcular</button>
+    <footer>
+    <p>&copy; 2025-Mi primer formulario con HTML, CSS y JS</p>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+    <script>
+    
+    particlesJS.load('particles-js', 'particles.json');
+    </script>
 
-        <p id="resultado"></p>
-    </header>
-    <main></main>
-    <footer></footer>
-
-    <script src="./src/js/main.js"></script> 
+    <script src="src/js/main.js" defer></script>
 </body>
 </html>
