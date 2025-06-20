@@ -1,0 +1,101 @@
+/* ─── Reset mínimo ─── */
+*{box-sizing:border-box;margin:0;padding:0;font-family:system-ui,Arial,sans-serif}
+
+/* ─── Layout global ─── */
+body{
+    display:grid;
+    grid-template-rows:1fr auto;
+    place-items:center;
+    min-height:100vh;
+    background:#000;
+    overflow:hidden;
+}
+
+#particles-js{
+    position:fixed;
+    inset:0;
+    z-index:-1;
+}
+
+/* ─── Tarjeta (“card”) ─── */
+.card{
+    width:90%;
+    max-width:420px;
+    padding:2.5rem 2rem;
+    background:#fff;
+    border-radius:1rem;
+    box-shadow:
+    0 0 60px rgba(233, 72, 8, 0.755),
+    0 0 120px rgba(163, 124, 124, 0.956);
+    display:flex;
+    flex-direction:column;
+    gap:1.5rem;
+    animation:fadeIn .6s ease;
+}
+
+.card h2{text-align:center;font-size:clamp(1.4rem,2.5vw,2rem);font-weight:700}
+
+/* Input group */
+.input-group{
+    display:flex;align-items:center;gap:.75rem;
+    border:1px solid #ccc;border-radius:999px;padding:.8rem 1.2rem;
+}
+.input-group i{color:#555}
+.input-group input{
+    flex:1;
+    border:none;
+    outline:none;
+    font-size:1rem;
+    background:transparent;
+  appearance: none;      /* Oculta spinner en algunos navegadores */
+  -moz-appearance: textfield; /* Oculta en Firefox */
+}
+.input-group input::-webkit-outer-spin-button,
+.input-group input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Botón */
+.btn{
+    border:none;border-radius:999px;background:#111;color:#fff;
+    padding:.95rem 0;font-size:1rem;font-weight:600;cursor:pointer;
+    transition:transform .25s,background .25s;
+}
+@keyframes bounce{0%{transform:translateY(0)}30%{transform:translateY(-6px)}60%{transform:translateY(2px)}100%{transform:translateY(0)}}
+.btn:hover{background:#333;animation:bounce .4s ease}
+
+/* ─── Mensaje generado por JS estilo burbuja de chat ─── */
+#formulario p {
+    background: #e0f7fa;
+    color: #004d40;
+    padding: 1rem 1.2rem;
+    border-radius: 20px;
+    max-width: 80%;
+    margin: 1rem auto 0;
+    position: relative;
+    animation: fadeInUp .5s ease;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    text-align: center;
+}
+
+#formulario p::after {
+    content: '';
+    position: absolute;
+    left: 20px;
+    bottom: -10px;
+    border: 10px solid transparent;
+    border-top-color: #e0f7fa;
+}
+
+/* ─── Footer ─── */
+footer{color:#777;font-size:.8rem;text-align:center;padding:1rem}
+
+/* ─── Animación de entrada ─── */
+@keyframes fadeIn{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeInUp{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+
+/* ─── Responsive tweaks ─── */
+@media(min-width:600px){.card{max-width:500px}}
+@media(min-width:992px){.card{max-width:540px}}
