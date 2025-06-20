@@ -2,9 +2,11 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8" />
+    // define el jeugo de caracteres del documento
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="this is a page when you can validate your age and name">
     <meta name="keywords" content="age, name, validation, form, javascript, html, css">
+    // palabras clave para el SEO (búsqueda)
     <meta name="sitedomain" content="https://github.com/Sebs2099/APLI-IMC.git">
     <meta name="organization" content="Sebs2099">
     <meta name="author" content="Sebastian Cabarcas">
@@ -14,7 +16,7 @@
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="15days">
     <meta name="theme-color" content="#ffffff">
-
+    // Cambia el color de la barra superior en móviles (como en Chrome Android)
     <link rel="stylesheet" href="src/css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <title>Validación de Edad</title>
@@ -22,35 +24,35 @@
 
 <body>
     
-    <div id="particles-js"></div>
     <div class="card">
+    // Tarjeta que contiene el formulario, con título
     <h2>Validación de Edad</h2>
-    
+    // Grupo con ícono + input para escribir el nombre
     <div class="input-group">
         <i class="fa-solid fa-user"></i>
         <input type="text" id="nombre" placeholder="Escribe tu nombre">
     </div>
-
+    // Otro input pero para la edad, también con ícono
     <div class="input-group">
         <i class="fa-solid fa-calendar"></i>
         <input type="number" id="edad" placeholder="Escribe tu edad">
     </div>
    
     <button id="enviarBtn" class="btn">Enviar</button>
-
+    // Aquí se va a mostrar el mensaje de resultado (error o éxito)
     <section id="formulario"></section>
     </div>
 
     <footer>
     <p>&copy; 2025-Mi primer formulario con HTML, CSS y JS</p>
     </footer>
-    
+    // Carga la librería de partículas (efecto de fondo)
     <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
     <script>
     
     particlesJS.load('particles-js', 'particles.json');
     </script>
-
+    // Carga tu archivo JavaScript personalizado (el que ya vimos antes)
     <script src="src/js/main.js" defer></script>
 </body>
 </html>
