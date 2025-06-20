@@ -41,6 +41,12 @@ Contributions are welcome! If you have suggestions for improvements or want to f
 
 Please ensure your code follows the existing style and that you provide a clear description of your changes in the pull request.
 
+## Author
+
+-   **Name:** Sebastian Cabarcas
+-   **CC:** 1234093880
+-   **Clan:** Caiman
+
 ## License
 
 This project is licensed under the GNU General Public License Version 3. See the [LICENSE](LICENSE) file for more details.
